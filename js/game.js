@@ -6,24 +6,47 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You come across a plain black door and a colorful door",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Enter the black door",
+                    nextLevel: "investigation_room",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Enter the colorful door",
+                    nextLevel: "candy_room",
                 },
             ]
         },
 
-        cave: {
+        candy_room: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: " Good Choice :) Choose a weapon",
+            choices: [
+                {
+                    text: "Knife",
+                    nextLevel: "Slaying",
+                }
+                ,
+                {
+                    text: "pillow",
+                    nextLevel: "guilty_room",
+                },
+            ]
+        },
+        guilty_room: {
+            message:"Glad to know you are a lovely person, but that won't help you",
+            choices: [
+                {
+                    text: "start over",
+                    nextLevel: "start",
+                },
+             ]
+        },
+        investigation_room: {
+            message: "The colorful door is the right answer...",
             choices: [
                 {
                     text: "Start over",
@@ -31,16 +54,11 @@ var game = {
                 },
             ]
         },
+}
 
-        field: {
-            message: "Some adventurer you are...",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
 
-    }
-};
+
+
+
+
+
